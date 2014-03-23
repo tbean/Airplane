@@ -161,7 +161,7 @@ public class AirplaneGUI extends javax.swing.JFrame {
         
     }
     
-    //
+    //coded by thomas
     private void seating(){
         for (int i = 0; i < 10; i++){
             if (seatArray[i] == 1) {
