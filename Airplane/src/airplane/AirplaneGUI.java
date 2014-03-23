@@ -6,9 +6,12 @@
 
 package airplane;
 
+import java.awt.Color;
+import java.awt.Graphics;
+
 /**
  *
- * @author Thomas
+ * @author Tenzin Dhargye
  */
 public class AirplaneGUI extends javax.swing.JFrame {
 
@@ -28,17 +31,51 @@ public class AirplaneGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        label1 = new java.awt.Label();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jButton1 = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 255, 204));
+
+        label1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        label1.setText("Eco Airline");
+
+        jRadioButton1.setText("First Class");
+
+        jRadioButton2.setText("Economy");
+        jRadioButton2.setToolTipText("");
+
+        jButton1.setText("Quit");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 466, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jRadioButton2)
+                    .addComponent(jRadioButton1))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jRadioButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jRadioButton2))
+                    .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 378, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(28, 28, 28))
         );
 
         pack();
@@ -78,7 +115,50 @@ public class AirplaneGUI extends javax.swing.JFrame {
             }
         });
     }
-
+    public void paint(Graphics g){
+        super.paint(g);
+        
+        int x[] = {100, 250, 250, 250, 250};
+        int y[] = {500, 500, 100, 100, 100};
+        
+        int x2[] = {600, 450, 450, 450, 450};
+        int y2[] = {500, 500, 100, 100, 100};
+        
+        g.setColor(Color.green);
+        g.fillArc(250, 5, 200, 190, 0, 180); //head of airplane
+        g.setColor(Color.green);
+        g.fillRect(250, 100, 200, 400); //plane body
+        g.setColor(Color.GRAY);
+        g.fillRect(280, 100, 140, 400); //inside body(seats)
+        g.setColor(Color.green);
+        g.fillPolygon(x, y, 5); //left wing
+        g.fillPolygon(x2,y2,5); //right wing
+        
+        //first class seats
+        g.setColor(Color.blue);
+        g.fillOval(280, 120, 50, 50);
+        g.fillOval(370, 120, 50, 50);
+        
+        //economy seats
+        g.setColor(Color.red);
+        g.fillOval(280, 230, 50, 50);
+        g.fillOval(370, 230, 50, 50);
+        
+        g.fillOval(280, 300, 50, 50);
+        g.fillOval(370, 300, 50, 50);
+        
+        g.fillOval(280, 370, 50, 50);
+        g.fillOval(370, 370, 50, 50);
+        
+        g.fillOval(280, 440, 50, 50);
+        g.fillOval(370, 440, 50, 50);
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private java.awt.Label label1;
     // End of variables declaration//GEN-END:variables
 }
+
+
