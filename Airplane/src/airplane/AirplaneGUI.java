@@ -31,6 +31,7 @@ public class AirplaneGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         label1 = new java.awt.Label();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
@@ -42,8 +43,10 @@ public class AirplaneGUI extends javax.swing.JFrame {
         label1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         label1.setText("Eco Airline");
 
+        buttonGroup1.add(jRadioButton1);
         jRadioButton1.setText("First Class");
 
+        buttonGroup1.add(jRadioButton2);
         jRadioButton2.setText("Economy");
         jRadioButton2.setToolTipText("");
 
@@ -154,6 +157,7 @@ public class AirplaneGUI extends javax.swing.JFrame {
         g.fillOval(370, 440, 50, 50);
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
