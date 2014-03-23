@@ -14,6 +14,9 @@ import java.awt.Graphics;
  * @author Tenzin Dhargye
  */
 public class AirplaneGUI extends javax.swing.JFrame {
+    
+    //coded by thomas
+    int[] seatArray = {1,1,1,1,1,1,1,1,1,1};
 
     /**
      * Creates new form AirplaneGUI
@@ -155,6 +158,18 @@ public class AirplaneGUI extends javax.swing.JFrame {
         
         g.fillOval(280, 440, 50, 50);
         g.fillOval(370, 440, 50, 50);
+        
+    }
+    
+    //
+    private void seating(){
+        for (int i = 0; i < 10; i++){
+            if (seatArray[i] == 1) {
+                seatArray[i] = 0;
+                break;
+            }
+        }
+        
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
